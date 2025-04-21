@@ -1,6 +1,7 @@
 <?php 
 
 class Person {
+    const AUTHOR = "JODI JONATAN";
     var ?string $name = "Anonymous";
     var string $address;
     var string $country;
@@ -10,5 +11,9 @@ class Person {
         } else {
             echo "Hi $name, my name is $this->name" . PHP_EOL;
         }
+    }
+
+    function info () {
+        echo "AUTHOR : " . self::AUTHOR;
     }
 }
