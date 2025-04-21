@@ -1,4 +1,7 @@
-const btn = document.getElementById("toggle");
+const body = document.body;
+document.title = "Jodi Jonatan";
+
+let btn = document.getElementById("toggle");
 btn.style.background = "red";
 btn.style.border = "none";
 btn.style.display = "flex";
@@ -10,5 +13,4 @@ btn.style.borderRadius = "20px";
 
 function masuk() {
   btn.style.background = "blue";
-  btn.style.color = "black";
 }
