@@ -14,6 +14,6 @@ class Person {
     }
 
     function info () {
-        echo "AUTHOR : " . self::AUTHOR;
+        echo "AUTHOR adalah : " . Person::AUTHOR . PHP_EOL;
     }
 }

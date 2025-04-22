@@ -11,5 +11,5 @@ echo slebew . PHP_EOL;
 
 echo Person::AUTHOR . PHP_EOL;
 
-$info = new Person;
-$info->info();
+$Creator = new Person;
+$Creator->info();
