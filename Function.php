@@ -2,5 +2,5 @@
 
 include_once "data/Person.php";
 
-$human = new Person;
-$human->sayHello("Jodi");
+$jodi = new Person("Jodi", "Medan");
+$jodi->sayHello("Plenger");

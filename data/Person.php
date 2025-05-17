@@ -2,9 +2,17 @@
 
 class Person {
     const AUTHOR = "JODI JONATAN";
-    var ?string $name = "Anonymous";
-    var string $address;
-    var string $country;
+
+    public ?string $name = "Anonymous";
+    public ?string $address = null;
+    public string $country = "Indonesia"; // Tambahkan nilai default
+
+    function __construct(string $name, ?string $address)
+    {
+        $this->name = $name;
+        $this->address = $address;
+    }
+
     function sayHello (?string $name) {
         if (is_null($name)) {
             echo "Hi, my name is $this->name" . PHP_EOL;
