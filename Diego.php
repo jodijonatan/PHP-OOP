@@ -11,5 +11,7 @@ echo "I'm $Diego->name";
 echo ", from $Diego->address";
 echo ", My country is $Diego->country" . PHP_EOL . PHP_EOL;
 
-$Diego->sayHello("Joo");
 $Diego->info();
+
+$Diego->sayHello(null);
+// $Diego->info();

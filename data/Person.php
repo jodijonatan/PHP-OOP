@@ -13,6 +13,11 @@ class Person {
         $this->address = $address;
     }
 
+    function info() {
+        echo "Hiii!, my name is $this->name" . PHP_EOL;
+        echo "I from $this->address" . PHP_EOL . PHP_EOL;
+    }
+
     function sayHello (?string $name) {
         if (is_null($name)) {
             echo "Hi, my name is $this->name" . PHP_EOL;
@@ -21,7 +26,7 @@ class Person {
         }
     }
 
-    function info () {
-        echo "AUTHOR adalah : " . Person::AUTHOR . PHP_EOL;
-    }
+    // function info () {
+    //     echo "AUTHOR adalah : " . Person::AUTHOR . PHP_EOL;
+    // }
 }
