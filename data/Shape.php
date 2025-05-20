@@ -4,13 +4,13 @@ namespace Data;
 
 class Shape {
     public function getCorner() {
-        return 0;
+        return 9 . PHP_EOL;
     }
 }
 
 class Rectangle extends Shape {
     public function getCorner() {
-        return 4;
+        return 4 . PHP_EOL;
     }
 
     public function getParentCorner() {
