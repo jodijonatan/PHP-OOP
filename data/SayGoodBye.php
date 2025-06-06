@@ -26,8 +26,17 @@ trait CanRun {
     public abstract function run (): void;
 }
 
+trait All {
+    use SayGoodBye, SayHello, HasName, CanRun {
+        //Trait Visibility Override 
+
+        // hello as private;
+        // goodBye as private;
+    }
+}
+
 class Person {
-    use SayGoodBye, SayHello, HasName, CanRun;
+    use All;
 
     function run (): void {
         echo "Person $this->name is running";
