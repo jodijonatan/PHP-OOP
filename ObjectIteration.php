@@ -11,11 +11,11 @@ namespace Data\Otomatis {
 
     $data = new Data;
 
-    echo "Otomatis" . PHP_EOL;
+    echo PHP_EOL . "Otomatis" . PHP_EOL;
     foreach ($data as $key => $value) {
-        echo "$key : $value" . PHP_EOL . PHP_EOL;
+        echo "$key : $value" . PHP_EOL;
     }
-};
+}
 
 namespace Data\Manual {
     use ArrayIterator;
@@ -41,7 +41,33 @@ namespace Data\Manual {
 
     $data = new Data;
 
-    echo "Manual" . PHP_EOL;
+    echo PHP_EOL . "Manual" . PHP_EOL;
+    foreach ($data as $key => $value) {
+        echo "$key : $value" . PHP_EOL;
+    }
+}
+
+namespace Data\Generator {
+    use ArrayIterator;
+    use IteratorAggregate;
+
+    // Iterator manual
+    class Data implements IteratorAggregate // Interface bawaan dari PHP
+    {
+        public string $firstName = "Jodi";
+        protected string $middleName = "Jonatan";
+        private string $lastName = "Karo karo";
+
+        public function getIterator (): \Traversable {
+            yield "First name" => $this->firstName;
+            yield "Middle name" => $this->middleName;
+            yield "Last name" => $this->lastName;
+        } 
+    }
+
+    $data = new Data;
+
+    echo PHP_EOL. "Generator" . PHP_EOL;
     foreach ($data as $key => $value) {
         echo "$key : $value" . PHP_EOL;
     }
